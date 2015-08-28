@@ -1,0 +1,49 @@
+//
+//  FristApp-PrefixHeader.pch
+//  FirstApp
+//
+//  Created by Tops on 8/10/15.
+//  Copyright (c) 2015 Tops. All rights reserved.
+//
+
+
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "MTLModel.h"
+#import "MTLJSONAdapter.h"
+
+#import "BaseVC.h"
+#import "MyLable.h"
+#import "AppDelegate.h"
+#import "LocalizeHelper.h"
+#import "Global.h"
+
+#import "ShareList.h"
+#import "ShareExpenses.h"
+#import "ShareUser.h"
+
+#import "DatabaseHandler.h" //-fno-objc-arc
+#import "DateHandler.h"
+#import "FMDatabase.h"
+//View help
+#import "ViewHelp.h"
+
+#import "AlertView.h"
+#import "Singleton.h"
+#import "StaticClass.h"
+#import "LoadingView.h"
+#import "APIList.h"
+#import "KGModal.h"
+#import "IQKeyboardManager.h"
+#import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
+#import "UIButton+AFNetworking.h"
+
+#endif

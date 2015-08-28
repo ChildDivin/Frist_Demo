@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/AJNotificationView" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/IQKeyboardManager" "${PODS_ROOT}/Headers/Public/KGModal" "${PODS_ROOT}/Headers/Public/Mantle" "${PODS_ROOT}/Headers/Public/RDVCalendarView"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/AJNotificationView" -isystem "${PODS_ROOT}/Headers/Public/FMDB" -isystem "${PODS_ROOT}/Headers/Public/IQKeyboardManager" -isystem "${PODS_ROOT}/Headers/Public/KGModal" -isystem "${PODS_ROOT}/Headers/Public/Mantle" -isystem "${PODS_ROOT}/Headers/Public/RDVCalendarView"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-FirstApp-AFNetworking" -l"Pods-FirstApp-AJNotificationView" -l"Pods-FirstApp-FMDB" -l"Pods-FirstApp-IQKeyboardManager" -l"Pods-FirstApp-KGModal" -l"Pods-FirstApp-Mantle" -l"Pods-FirstApp-RDVCalendarView" -l"sqlite3" -framework "CoreGraphics" -framework "Foundation" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

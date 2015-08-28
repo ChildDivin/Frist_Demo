@@ -1,0 +1,54 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AJNotificationView (0.7)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - IQKeyboardManager (3.2.4)
+  - KGModal (1.1.0)
+  - Mantle (2.0.3):
+    - Mantle/extobjc (= 2.0.3)
+  - Mantle/extobjc (2.0.3)
+  - RDVCalendarView (1.0.7)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AJNotificationView
+  - FMDB
+  - IQKeyboardManager
+  - KGModal
+  - Mantle
+  - RDVCalendarView
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AJNotificationView: fe9f2e3b806ab71e3705047ed243a283b7155731
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
+  KGModal: 57277ac326498d9eebcdc677a59ff4528b21935f
+  Mantle: 8d6b14979a082a9ed4994463eb7a4ff576c94632
+  RDVCalendarView: f9702024bbbc235709748812cff6f5f48b147fbb
+
+COCOAPODS: 0.37.2
