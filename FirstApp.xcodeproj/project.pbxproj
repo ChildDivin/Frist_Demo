@@ -249,7 +249,6 @@
 				E7A7F0B21B788D3F00A7FC2C /* APIHandler */,
 				E7A7F0B91B788D3F00A7FC2C /* DatabaseHandler */,
 				E7A7F0BC1B788D3F00A7FC2C /* DateHandler */,
-				E7A7F0BF1B788D3F00A7FC2C /* GCPlaceholderTextView */,
 				E7A7F0C21B788D3F00A7FC2C /* LoadingView */,
 				E7A7F0C51B788D3F00A7FC2C /* ShareObject */,
 				E7A7F0D21B788D3F00A7FC2C /* Singleton */,
@@ -261,6 +260,7 @@
 		E79D5CB31B788B2D00899135 /* MainClass */ = {
 			isa = PBXGroup;
 			children = (
+				E7A7F0BF1B788D3F00A7FC2C /* GCPlaceholderTextView */,
 				E76952F71B903B8D0093E889 /* CustomLable */,
 				E79D5CB41B788B2D00899135 /* AppDelegate */,
 				E79D5CB71B788B2D00899135 /* BaseClass */,
@@ -388,7 +388,8 @@
 				E7A7F0C01B788D3F00A7FC2C /* GCPlaceholderTextView.h */,
 				E7A7F0C11B788D3F00A7FC2C /* GCPlaceholderTextView.m */,
 			);
-			path = GCPlaceholderTextView;
+			name = GCPlaceholderTextView;
+			path = ../Entities/GCPlaceholderTextView;
 			sourceTree = "<group>";
 		};
 		E7A7F0C21B788D3F00A7FC2C /* LoadingView */ = {

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F5D4DA0A-2985-4829-9FB2-A429BC9F45A9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FirstApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EB1B5D55B0386F84B1E3672FE33F2756E4AB6FAC</key>
+		<string>https://github.com/ChildDivin/Frist_Demo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FirstApp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EB1B5D55B0386F84B1E3672FE33F2756E4AB6FAC</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ChildDivin/Frist_Demo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EB1B5D55B0386F84B1E3672FE33F2756E4AB6FAC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EB1B5D55B0386F84B1E3672FE33F2756E4AB6FAC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FirstApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

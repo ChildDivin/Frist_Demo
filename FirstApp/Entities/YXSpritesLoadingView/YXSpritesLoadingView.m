@@ -8,11 +8,13 @@
 
 #import "YXSpritesLoadingView.h"
 #import "UIImage+animatedGIF.h"
-
+#define g_logder_height 60
+#define g_logder_height_WithText 100
 @implementation YXSpritesLoadingView
 {
     UIView *loaderView;
     UIImageView *loadingImageView;
+    UIView *loaderImageBG;
     UILabel *loadingLabel;
     UIWindow *window;
 }
@@ -57,16 +59,21 @@
         loaderView = [[UIView alloc]init];
         loaderView.backgroundColor = loaderBackgroundColor;
         
+        
+        loaderImageBG =[[UIView alloc] init];
         if(!overlay) {
-            loaderView.layer.cornerRadius = loaderCornerRadius;
+            loaderView.frame = CGRectMake(0, 0, g_ScreenWidth, g_ScreenHeight);
+            loaderView.backgroundColor=[UIColor clearColor];
         }
         
         if([text isEqualToString:@""]) {
             if(overlay) {
                 loaderView.frame = CGRectMake(0, 0, g_ScreenWidth, g_ScreenHeight);
             } else {
-                loaderView.frame = CGRectMake((g_ScreenWidth-loaderBackgroundWidth)/2, (g_ScreenHeight-loaderBackgroundHeight)/2, loaderBackgroundWidth, loaderBackgroundHeight);
+                //loaderView.frame = CGRectMake((g_ScreenWidth-loaderBackgroundWidth)/2, (g_ScreenHeight-loaderBackgroundHeight)/2, loaderBackgroundWidth, loaderBackgroundHeight);
+                
             }
+            loaderImageBG.frame= CGRectMake((g_ScreenWidth-g_logder_height)/2, (g_ScreenHeight-g_logder_height)/2, g_logder_height, g_logder_height);
         } else {
             CGSize size = [StaticClass getSizeOfString:text width:loaderBackgroundWidth-(loadingTextLabelSideMargin*2) font:[UIFont fontWithName:loadingTextFontName size:loadingTextFontSize] minimumHeight:20];
             textHeight = size.height;
@@ -74,25 +81,30 @@
             if(overlay) {
                 loaderView.frame = CGRectMake(0, 0, g_ScreenWidth, g_ScreenHeight);
             } else {
-                loaderView.frame = CGRectMake((g_ScreenWidth-loaderBackgroundWidth)/2, (g_ScreenHeight-loaderBackgroundHeight-textHeight)/2, loaderBackgroundWidth, loaderBackgroundHeight+textHeight+loadingTextLabelBottomMargin);
+                //loaderView.frame = CGRectMake((g_ScreenWidth-loaderBackgroundWidth)/2, (g_ScreenHeight-loaderBackgroundHeight-textHeight)/2, loaderBackgroundWidth, loaderBackgroundHeight+textHeight+loadingTextLabelBottomMargin);
             }
+            loaderImageBG.frame= CGRectMake((g_ScreenWidth-g_logder_height_WithText)/2, (g_ScreenHeight-g_logder_height_WithText)/2, g_logder_height_WithText, g_logder_height_WithText);
             
-            
-            loadingLabel = [[UILabel alloc]initWithFrame:CGRectMake(loadingTextLabelSideMargin, loaderView.frame.size.height-textHeight-loadingTextLabelBottomMargin, loaderView.frame.size.width-(loadingTextLabelSideMargin*2), textHeight)];
+            loadingLabel = [[UILabel alloc]initWithFrame:CGRectMake(loadingTextLabelSideMargin, loaderImageBG.frame.size.height-textHeight-loadingTextLabelBottomMargin, loaderImageBG.frame.size.width-(loadingTextLabelSideMargin*2), textHeight)];
             loadingLabel.font = [UIFont fontWithName:loadingTextFontName size:loadingTextFontSize];
             loadingLabel.textAlignment = NSTextAlignmentCenter;
             loadingLabel.text = text;
             loadingLabel.textColor = loadingTextColor;
             loadingLabel.numberOfLines = 0;
-            [loaderView addSubview:loadingLabel];
+            [loaderImageBG addSubview:loadingLabel];
         }
         
+        loaderImageBG.backgroundColor=[UIColor blackColor];
+        loaderImageBG.layer.cornerRadius=5.0;
+        
+        
         loadingImageView = [[UIImageView alloc] init];
-        loadingImageView.frame = CGRectMake((loaderView.frame.size.width-animationImageWidth)/2, (loaderView.frame.size.height-animationImageHeight-textHeight)/2, animationImageWidth, animationImageHeight);
+        loadingImageView.frame = CGRectMake((loaderImageBG.frame.size.width-animationImageWidth)/2, (loaderImageBG.frame.size.height-animationImageHeight-textHeight)/2, animationImageWidth, animationImageHeight);
         loadingImageView.contentMode = UIViewContentModeScaleToFill;
         loadingImageView.layer.zPosition = MAXFLOAT;
         loadingImageView.image = [UIImage animatedImageWithAnimatedGIFURL:[[NSBundle mainBundle] URLForResource:spriteNameString withExtension:@"gif"]];
-        [loaderView addSubview:loadingImageView];
+        [loaderImageBG addSubview:loadingImageView];
+        [loaderView addSubview:loaderImageBG];
     }
     
     if (loaderView.superview == nil) {
